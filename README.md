@@ -228,6 +228,57 @@ rs, err := manager.ItemCommentReply(douyinGo.ItemCommentReplyReq{
     },
 })
 ```
+**评论列表（企业号）** `/video/comment/list/`
+```go
+list, err := manager.VideoCommentList(douyinGo.VideoCommentListReq{
+    AccessToken: "ACCESS_TOKEN",
+    OpenId:      "OPEN_ID",
+    ItemId:      "VIDEO_ID",
+    Cursor:      0,
+    Count:       10,
+})
+```
+
+**评论回复列表（企业号）** `/video/comment/reply/list/`
+```go
+list, err := manager.VideoCommentReplyList(douyinGo.VideoCommentReplyListReq{
+    AccessToken: "ACCESS_TOKEN",
+    OpenId:      "OPEN_ID",
+    ItemId:      "VIDEO_ID",
+    CommentId:   "COMMENT_ID",
+    Cursor:      0,
+    Count:       10,
+})
+```
+
+**回复视频评论（企业号）** `/video/comment/reply/`
+```go
+rs, err := manager.VideoCommentReply(douyinGo.VideoCommentReplyReq{
+    AccessToken: "ACCESS_TOKEN",
+    OpenId:      "OPEN_ID",
+    Body: douyinGo.VideoCommentReplyBody{
+        CommentId: "COMMENT_ID", //(可选，不填为回复视频)
+        ItemId:    "VIDEO_ID",
+        Content:   "CONTENT",
+    },
+})
+```
+
+**发私信给用户（企业号）** `/enterprise/im/message/send/`
+```go
+rs, err := manager.ImMessage(douyinGo.ImMessageReq{
+    AccessToken: "ACCESS_TOKEN",
+    OpenId:      "OPEN_ID", 
+    ImMessageSchema:  "SCHEMA"  
+    //如下面的MessageType是"text",则此处为文字内容；/ 如"image",则素材id；/ 如"video",则视频id；/ 如"card",则卡片id
+    Body: douyinGo.ImMessageBody{
+        Content:       "COMMENT_ID", 
+        MessageType:   "video",       //四选项，text/image/video/card 
+        PersonaId:     "PersonaId" ,  //客服id，传则走客服会话，否则为普通会话)
+        ToUserId:      "CONTENT",     //消息的接收方openid
+    },
+})
+```
 
 **获取用户视频情况** `/data/external/user/item/`
 ```go

@@ -142,6 +142,21 @@ const (
 	// API_ITEM_COMMENT_REPLY 回复视频评论
 	API_ITEM_COMMENT_REPLY = "/item/comment/reply/"
 
+	// API_VIDEO_COMMENT_LIST 获取评论列表（企业号）
+	API_VIDEO_COMMENT_LIST = "/video/comment/list/"
+
+	// API_VIDEO_COMMENT_REPLY_LIST 获取评论回复列表（企业号）
+	API_VIDEO_COMMENT_REPLY_LIST = "/video/comment/reply/list/"
+
+	// API_VIDEO_COMMENT_REPLY 回复视频评论（企业号）
+	API_VIDEO_COMMENT_REPLY = "/video/comment/reply/"
+
+	// API_VIDEO_COMMENT_TOP 置顶视频评论（企业号）
+	API_VIDEO_COMMENT_TOP = "/video/comment/top/"
+
+	// API_IM_MESSAGE_SEND 发送私信给用户（企业号）
+	API_IM_MESSAGE_SEND = "/enterprise/im/message/send/"
+
 	// API_EVENT_STATUS_LIST 获取事件订阅状态
 	API_EVENT_STATUS_LIST = "/event/status/list/"
 
