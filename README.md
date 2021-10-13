@@ -1,11 +1,5 @@
 # Douyin SDK for Go
 
-[![Build](https://img.shields.io/badge/github-passing-green?style=flat&logo=github)](https://github.com/CriarBrand/douyin-go/actions/workflows/go.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/CriarBrand/douyin-go)](https://goreportcard.com/report/github.com/CriarBrand/douyin-go)
-[![Version](https://img.shields.io/github/release/zhangshuai/douyin-go.svg?style=flat)](https://github.com/CriarBrand/douyin-go/releases/latest)
-[![Reference](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](http://godoc.org/github.com/CriarBrand/douyin-go)
-[![Licence](https://img.shields.io/github/license/zhangshuai/douyin-go?style=flat)](https://github.com/CriarBrand/douyin-go/blob/master/LICENSE)
-
 抖音开放平台SDK
 
 ## 安装
