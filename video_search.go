@@ -3,7 +3,7 @@ package douyingo
 import (
 	"context"
 
-	"github.com/zhangshuai/douyin-go/conf"
+	"github.com/CriarBrand/douyin-go/conf"
 )
 
 // VideoSearchReq 关键词视频搜索请求

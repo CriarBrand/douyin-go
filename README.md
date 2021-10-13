@@ -1,16 +1,16 @@
 # Douyin SDK for Go
 
-[![Build](https://img.shields.io/badge/github-passing-green?style=flat&logo=github)](https://github.com/zhangshuai/douyin-go/actions/workflows/go.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/zhangshuai/douyin-go)](https://goreportcard.com/report/github.com/zhangshuai/douyin-go)
-[![Version](https://img.shields.io/github/release/zhangshuai/douyin-go.svg?style=flat)](https://github.com/zhangshuai/douyin-go/releases/latest)
-[![Reference](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](http://godoc.org/github.com/zhangshuai/douyin-go)
-[![Licence](https://img.shields.io/github/license/zhangshuai/douyin-go?style=flat)](https://github.com/zhangshuai/douyin-go/blob/master/LICENSE)
+[![Build](https://img.shields.io/badge/github-passing-green?style=flat&logo=github)](https://github.com/CriarBrand/douyin-go/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/CriarBrand/douyin-go)](https://goreportcard.com/report/github.com/CriarBrand/douyin-go)
+[![Version](https://img.shields.io/github/release/zhangshuai/douyin-go.svg?style=flat)](https://github.com/CriarBrand/douyin-go/releases/latest)
+[![Reference](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](http://godoc.org/github.com/CriarBrand/douyin-go)
+[![Licence](https://img.shields.io/github/license/zhangshuai/douyin-go?style=flat)](https://github.com/CriarBrand/douyin-go/blob/master/LICENSE)
 
 抖音开放平台SDK
 
 ## 安装
 ```go
-import douyinGo "github.com/zhangshuai/douyin-go"
+import douyinGo "github.com/CriarBrand/douyin-go"
 ```
 ## 使用
 **初始化**
@@ -261,6 +261,19 @@ rs, err := manager.VideoCommentReply(douyinGo.VideoCommentReplyReq{
         ItemId:    "VIDEO_ID",
         Content:   "CONTENT",
     },
+})
+```
+
+**置顶视频评论（企业号）** `/video/comment/top/`
+```go
+rs, err := manager.VideoCommentTop(douyinSDK.VideoCommentTopReq{
+	AccessToken: "ACCESS_TOKEN", 
+	OpenId:      "OPEN_ID",
+	Body: douyinSDK.VideoCommentTopBody{
+		CommentId: "COMMENT_ID", 
+		ItemId:    "VIDEO_ID", 
+		Top:       isTop,   // true or false 布尔值
+},
 })
 ```
 

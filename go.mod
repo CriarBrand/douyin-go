@@ -1,5 +1,6 @@
-module github.com/zhangshuai/douyin-go
+module github.com/CriarBrand/douyin-go
 
-go 1.14
+go 1.16
 
-require ()
+require (
+)

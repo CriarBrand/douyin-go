@@ -3,7 +3,7 @@ package douyingo
 import (
 	"context"
 	"errors"
-	"github.com/zhangshuai/douyin-go/conf"
+	"github.com/CriarBrand/douyin-go/conf"
 )
 
 // ImMessageReq 发私信给用户请求(企业号)

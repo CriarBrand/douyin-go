@@ -2,7 +2,7 @@ package douyingo
 
 import (
 	"context"
-	"github.com/zhangshuai/douyin-go/conf"
+	"github.com/CriarBrand/douyin-go/conf"
 	"net/url"
 )
 
@@ -120,7 +120,7 @@ type VideoCommentTopReq struct {
 // VideoCommentTopBody 置顶视频评论请求body(企业号)
 type VideoCommentTopBody struct {
 	CommentId string `json:"comment_id,omitempty"` // 需要回复的评论id（如果需要回复的是视频不传此字段）
-	Content   string `json:"content"`              // 评论内容
+	Top       bool   `json:"top"`                  // true: 置顶, false: 取消置顶
 	ItemId    string `json:"item_id"`              // 视频id
 }
 
@@ -130,7 +130,7 @@ type VideoCommentTopRes struct {
 	Extra DYExtra `json:"extra"`
 }
 
-// VideoCommentTop 回复视频评论(企业号)
+// VideoCommentTop 置顶视频评论(企业号)
 func (m *Manager) VideoCommentTop(req VideoCommentTopReq) (res VideoCommentTopRes, err error) {
 	err = m.client.CallWithJson(context.Background(), &res, "POST", m.url("%s?access_token=%s&open_id=%s", conf.API_VIDEO_COMMENT_TOP, req.AccessToken, req.OpenId), nil, req.Body)
 	return res, err
