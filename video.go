@@ -50,7 +50,8 @@ type Video struct {
 	IsTop       bool       `json:"is_top"`       // 是否置顶
 	ItemId      string     `json:"item_id"`      // 视频id
 	ShareUrl    string     `json:"share_url"`    // 视频播放页面。视频播放页可能会失效，请在观看视频前调用/video/data/获取最新的播放页。
-	VideoStatus int        `json:"video_status"` // 表示视频状态。1:已发布;2:不适宜公开;4:审核中
+	VideoStatus int        `json:"video_status"` // 表示视频状态。1:已发布;2:不适宜公开;4:审核中;5:公开视频;6:好友可见;7:私密视频
+	MediaType   int        `json:"media_type"`   // 媒体类型。2:图集;4:视频
 }
 
 // VideoListResData 视频列表
