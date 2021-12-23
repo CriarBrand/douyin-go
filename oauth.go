@@ -129,6 +129,7 @@ type OauthUserinfoResData struct {
 	Nickname      string `json:"nickname"`         // 昵称
 	Province      string `json:"province"`         // 省
 	Avatar        string `json:"avatar"`           // 头像
+	AvatarLarger  string `json:"avatar_larger"`    // 大头像
 	City          string `json:"city"`             // 城市
 	Country       string `json:"country"`          // 国家
 	EAccountRole  string `json:"e_account_role"`   // 类型: * `EAccountM` - 普通企业号 * `EAccountS` - 认证企业号 * `EAccountK` - 品牌企业号
